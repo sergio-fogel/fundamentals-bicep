@@ -11,7 +11,7 @@ az account set --subscription "Subscription Name"
 az configure --defaults group="resource group name"
 ````
 
-## Templates execution:
+## Templates deployment:
 
 Exercise 1:
 
