@@ -45,7 +45,7 @@ az deployment group create \
   --parameters environmentType=nonprod
 ````
 
-With parameter values for EnvironmentType: prod or nonprod.
+With parameter values for environmentType: prod or nonprod.
 
 Exercise 4:
 
@@ -61,7 +61,7 @@ Exercise 5:
 az deployment group create --template-file main.bicep --parameters main.parameters.dev.json
 ````
 
-In the terminal, execute the commands to create the keyVaultName, login, and password variables; the key vault and secrets.
+In the terminal execute the commands to create the keyVaultName, login, and password variables; the key vault and secrets.
 
 In main.parameters.dev.josn replace the keyVault id.
 
