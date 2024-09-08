@@ -45,7 +45,7 @@ az deployment group create \
   --parameters environmentType=nonprod
 ````
 
-With parameter for EnvironmentType: prod or nonprod.
+With parameter values for EnvironmentType: prod or nonprod.
 
 Exercise 4:
 
