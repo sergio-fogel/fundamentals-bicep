@@ -28,7 +28,7 @@ az keyvault show --name $keyVaultName --query id --output tsv
 
 ## Templates deployment:
 
-Exercise 1:
+**Exercise 1:**
 
 ````bash
 az deployment group create --template-file main.bicep
@@ -37,7 +37,7 @@ az deployment group list --output table
 
 In this scenario, the storage account and the App Service app names have a hard-coded default value. This two resources need globally unique names: set the resources names, instead of the hard-coded value.
 
-Exercises 2 and 3:
+**Exercises 2 and 3:**
 
 ````bash
 az deployment group create \
@@ -47,7 +47,7 @@ az deployment group create \
 
 With parameter values for environmentType: prod or nonprod.
 
-Exercise 4:
+**Exercise 4:**
 
 ````bash
 az deployment group create --template-file main.bicep
@@ -55,7 +55,7 @@ az deployment group create --template-file main.bicep
 
 You don't need to specify the parameter values because they have default values specified.
 
-Exercise 5:
+**Exercise 5:**
 
 ````bash
 az deployment group create --template-file main.bicep --parameters main.parameters.dev.json
@@ -65,7 +65,7 @@ In the terminal execute the commands to create the keyVaultName, login, and pass
 
 In main.parameters.dev.josn replace the keyVault id.
 
-Exercise 6:
+**Exercise 6:**
 
 ````bash
 az deployment group create --template-file main.bicep --parameters environmentName=Production location=eastus2
