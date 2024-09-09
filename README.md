@@ -76,3 +76,11 @@ You don't need to specify the parameter value for environmentName because have a
 Set the location parameter.
 
 You're prompted to enter the values for sqlServerAdministratorLogin and sqlServerAdministratorLoginPassword parameters when you execute the deployment.
+
+**Exercise 7:**
+
+````bash
+az deployment group create --template-file main.bicep
+````
+
+You're prompted to enter the values for sqlServerAdministratorLogin and sqlServerAdministratorLoginPassword parameters when you execute the deployment.
