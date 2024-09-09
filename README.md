@@ -63,7 +63,7 @@ az deployment group create --template-file main.bicep --parameters main.paramete
 
 In the terminal execute the commands to create the keyVaultName, login, and password variables; the key vault and secrets.
 
-In main.parameters.dev.josn replace the keyVault id.
+In main.parameters.dev.json replace the keyVault id.
 
 **Exercise 6:**
 
@@ -71,7 +71,7 @@ In main.parameters.dev.josn replace the keyVault id.
 az deployment group create --template-file main.bicep --parameters environmentName=Production location=eastus2
 ````
 
-You don't need to specify the parameter value for environmentName because have default value specified (Development), but it also allows Production.
+You don't need to specify the parameter value for environmentName because have a default value specified (Development), but it also allows Production.
 
 Set the location parameter.
 
