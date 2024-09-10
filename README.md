@@ -33,7 +33,7 @@ az deployment group create --template-file main.bicep
 az deployment group list --output table
 ````
 
-If you have to specify or override one parameter:
+If you have to specify or override a parameter value:
 
 ````bash
 az deployment group create \
