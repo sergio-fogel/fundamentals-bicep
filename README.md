@@ -28,16 +28,12 @@ az keyvault show --name $keyVaultName --query id --output tsv
 
 ## Templates deployment:
 
-**Exercise 1:**
-
 ````bash
 az deployment group create --template-file main.bicep
 az deployment group list --output table
 ````
 
-In this scenario, the storage account and the App Service app names have a hard-coded default value. This two resources need globally unique names: set the resources names, instead of the hard-coded value.
-
-**Exercises 2 and 3:**
+If you have to specify or override one parameter:
 
 ````bash
 az deployment group create \
@@ -45,42 +41,10 @@ az deployment group create \
   --parameters environmentType=nonprod
 ````
 
-With parameter values for environmentType: prod or nonprod.
-
-**Exercise 4:**
+If you have to deploy with a parameters file:
 
 ````bash
-az deployment group create --template-file main.bicep
+az deployment group create \
+  --template-file main.bicep \
+  --parameters main.parameters.dev.json
 ````
-
-You don't need to specify the parameter values because they have default values specified.
-
-**Exercise 5:**
-
-````bash
-az deployment group create --template-file main.bicep --parameters main.parameters.dev.json
-````
-
-In the terminal execute the commands to create the keyVaultName, login, and password variables; the key vault and secrets.
-
-In main.parameters.dev.json replace the keyVault id.
-
-**Exercise 6:**
-
-````bash
-az deployment group create --template-file main.bicep --parameters environmentName=Production location=eastus2
-````
-
-You don't need to specify the parameter value for environmentName because have a default value specified (Development), but it also allows Production.
-
-Set the location parameter.
-
-You're prompted to enter the values for sqlServerAdministratorLogin and sqlServerAdministratorLoginPassword parameters when you execute the deployment.
-
-**Exercise 7:**
-
-````bash
-az deployment group create --template-file main.bicep
-````
-
-You're prompted to enter the values for sqlServerAdministratorLogin and sqlServerAdministratorLoginPassword parameters when you execute the deployment.
